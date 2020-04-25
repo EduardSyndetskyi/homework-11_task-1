@@ -50,14 +50,17 @@ body {
 
 .col--1-3 { 
      width: 360px;
-     position: relative;
  }
 
  .col--shrink {
      flex-shrink: 1;
  }
 
-.blog-item {
+ .blog {
+     position: relative;
+ }
+
+.blog__item {
     display: inline-block;
     width: 100%;
     padding-top: 84%;
@@ -65,8 +68,8 @@ body {
     overflow: hidden;
 }
 
- .blog-item::after {
-     display: inline-block;
+ .blog__item::after {
+    display: inline-block;
     height: 200px;
     width: 100%;
     content: "";
@@ -76,7 +79,7 @@ body {
     background-image: linear-gradient(0deg,rgba(0,0,0,.5) 40%, transparent);
  }
  
- .blog-item__img {
+ .blog__item-img {
      position: absolute;
      top: 50%;
      left: 50%;
@@ -85,7 +88,7 @@ body {
      min-height: 108%;
   }
 
-.blog-item__data {
+.blog__item-data {
     padding: 0.2em;
     background-color: rgba( 0,0,0,.4);
     border-radius: 5px;
@@ -101,7 +104,7 @@ body {
     cursor: default;
 }
 
-.blog-item__linktitle {
+.blog__item-linktitle {
     text-decoration: none;
 
     font-weight: 700;
@@ -110,18 +113,18 @@ body {
     color: #ffffff;
 }
 
-.blog-item__title {
+.blog__item-title {
     position: absolute;
     bottom: 0;
     margin: 0 0 1.5em 0;
-    padding: 0 0.95em 1.15em 0.94em;
+    padding: 0 0.95em 2em 0.94em;
 }
 
-.blog-item__info {
+.blog__item-info {
     position: absolute;
     bottom: 0;
 
-    padding: 0 2em 2em 1.7em;
+    padding: 0 2em 2em 1.3em;
 
     font-weight: 300;
     font-size: 1.3rem;
@@ -129,15 +132,15 @@ body {
 
 }
 
-.blog-item__data:hover {
+.blog__item-data:hover {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
     transition: all .3s ease-in; 
 }
 
- .blog-item:hover,
- .blog-item:focus, 
- .blog-item:active {
+ .blog__item:hover,
+ .blog__item:focus, 
+ .blog__item:active {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
     transition: all .3s ease-in; 
